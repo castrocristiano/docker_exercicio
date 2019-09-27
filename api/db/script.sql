@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS
+    produtos;
+USE produtos;
+
+CREATE TABLE IF NOT EXISTS produtos(
+    id INT(11) AUTO_INCREMENT,
+    nome VARCHAR(255),
+    preco DECIMAL(10,2),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO produtos VALUE (0, 'CURSO', 2500);
+INSERT INTO produtos VALUE (0, 'CURSO JS', 900);
