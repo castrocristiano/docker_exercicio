@@ -33,6 +33,5 @@
 
 # Volumes
 ## -v define o volume
-## $() para executar um comando dentro da linha de comando, no nosso caso o comando pwd que mostra a pasta atual.
-
+## $() para executar um comando dentro da linha de comando, no nosso caso o comando pwd que mostra a pasta atual. $(pwd)
 > docker run -d -v $(pwd)/db/data:var/lib/mysql -rm --name mysql-container mysql-image
