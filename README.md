@@ -20,7 +20,7 @@
 ## -i significa que é comando interativo
 > docker exec -i mysql-container mysql -uroot -pK@r@mb@ < db/script.sql
 
-# Comandos utilizando o terminal
+# Comandos utilizando o terminal 
 ## -it comando interativo e t de terminal
 > docker exec -it mysql-container /bin/bash
 
@@ -34,4 +34,4 @@
 # Volumes
 ## -v define o volume
 ## $() para executar um comando dentro da linha de comando, no nosso caso o comando pwd que mostra a pasta atual. $(pwd)
-> docker run -d -v $(pwd)/db/data:var/lib/mysql -rm --name mysql-container mysql-image
+> docker run -d -v $(pwd)/db/data:/var/lib/mysql --rm --name mysql-container mysql-image
