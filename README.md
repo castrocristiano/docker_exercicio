@@ -35,3 +35,8 @@
 ## -v define o volume
 ## $() para executar um comando dentro da linha de comando, no nosso caso o comando pwd que mostra a pasta atual. $(pwd)
 > docker run -d -v $(pwd)/db/data:/var/lib/mysql --rm --name mysql-container mysql-image
+
+# Rodando o container expondo uma porta para o host
+## Usando a porta padrão do mysql, 3306
+## No host usando a porta 33061 
+> docker run -d -v $(pwd)/db/data:/var/lib/mysql -p 33061:3306 --rm --name mysql-container mysql-image
